@@ -37,6 +37,7 @@ Here is the entire directory structure of this repo. Note that each schema direc
 └── sqlcode
     ├── rootchangelog.xml
     ├── schema1
+    │   ├── schema1changelog.xml
     │   ├── data
     │   ├── functions
     │   ├── index
@@ -44,11 +45,11 @@ Here is the entire directory structure of this repo. Note that each schema direc
     │   ├── packagebody
     │   ├── packages
     │   ├── procedures
-    │   ├── schema1changelog.xml
     │   ├── tables
     │   ├── triggers
     │   └── views
     ├── schema2
+    │   ├── schema1changelog.xml
     │   ├── data
     │   ├── functions
     │   ├── index
@@ -56,11 +57,11 @@ Here is the entire directory structure of this repo. Note that each schema direc
     │   ├── packagebody
     │   ├── packages
     │   ├── procedures
-    │   ├── schema2changelog.xml
     │   ├── tables
     │   ├── triggers
     │   └── views
     └── schema3
+    │   ├── schema1changelog.xml
         ├── data
         ├── functions
         ├── index
@@ -68,7 +69,6 @@ Here is the entire directory structure of this repo. Note that each schema direc
         ├── packagebody
         ├── packages
         ├── procedures
-        ├── schema3changelog.xml
         ├── tables
         ├── triggers
         └── views
