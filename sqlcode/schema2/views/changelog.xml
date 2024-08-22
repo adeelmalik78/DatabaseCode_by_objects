@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+    http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd ">
+
+
+  <!-- <changeSet author="nvoxland" id="view1.sql" >
+    <sqlFile path="view1.sql"/>
+    <rollback>
+        <sqlFile path="view1-rollback.sql"/>
+    </rollback>
+  </changeSet>
+
+
+  <changeSet author="nvoxland" id="view2.sql">
+    <sqlFile path="view2.sql"/>
+    <rollback>
+        <sqlFile path="view2-rollback.sql"/>
+      </rollback>
+  </changeSet>
+
+
+  <changeSet author="nvoxland" id="view3">
+    <sqlFile path="view3.sql"/>
+    <rollback>
+        <sqlFile path="view3-rollback.sql"/>
+      </rollback>
+  </changeSet> -->
+
+</databaseChangeLog>
+
