@@ -9,7 +9,7 @@ Here is the high-level overview of the directory structure. Note that there is a
 ├── README.md
 ├── liquibase.properties
 └── sqlcode
-    ├── rootchangelog.xml
+    ├── rootchangelog.yaml
     ├── schema1
     ├── schema2
     └── schema3
@@ -24,20 +24,20 @@ materializedviews
 packagebody
 packages
 procedures
-schema1changelog.xml
+schema1changelog.yaml
 tables
 triggers
 views
 ```
 
-Here is the entire directory structure of this repo. Note that each schema directory has its own changelog file (e.g., `schema1changelog.xml`). 
+Here is the entire directory structure of this repo. Note that each schema directory has its own changelog file (e.g., `schema1changelog.yaml`). 
 
 ```.
 ├── liquibase.properties
 └── sqlcode
-    ├── rootchangelog.xml
+    ├── rootchangelog.yaml
     ├── schema1
-    │   ├── schema1changelog.xml
+    │   ├── schema1changelog.yaml
     │   ├── data
     │   ├── functions
     │   ├── index
@@ -49,7 +49,7 @@ Here is the entire directory structure of this repo. Note that each schema direc
     │   ├── triggers
     │   └── views
     ├── schema2
-    │   ├── schema1changelog.xml
+    │   ├── schema1changelog.yaml
     │   ├── data
     │   ├── functions
     │   ├── index
@@ -61,7 +61,7 @@ Here is the entire directory structure of this repo. Note that each schema direc
     │   ├── triggers
     │   └── views
     └── schema3
-    │   ├── schema1changelog.xml
+    │   ├── schema1changelog.yaml
         ├── data
         ├── functions
         ├── index
@@ -75,24 +75,50 @@ Here is the entire directory structure of this repo. Note that each schema direc
 ```
 
 ## Changelog files
-Note that there is a [rootchangelog.xml](sqlcode/rootchangelog.xml) which serves as the entry point changelog for Liquibase (as specified in [liquibase.properties](liquibase.properties) file). This file points to schemaXchangelog.xml files:
-```xml
-  <include file="schema1/schema1changelog.xml" relativeToChangelogFile="true"/>
-  <include file="schema2/schema2changelog.xml" relativeToChangelogFile="true"/>
-  <include file="schema3/schema3changelog.xml" relativeToChangelogFile="true"/>
+Note that there is a [rootchangelog.yaml](sqlcode/rootchangelog.yaml) which serves as the entry point changelog for Liquibase (as specified in [liquibase.properties](liquibase.properties) file). This file points to schemaXchangelog.yaml files:
+```yaml
+- include:
+    file: schema1/schema1changelog.yaml
+    relativeToChangelogFile: true
+- include:
+    file: schema2/schema2changelog.yaml
+    relativeToChangelogFile: true
+- include:
+    file: schema3/schema3changelog.yaml
+    relativeToChangelogFile: true
 ```
 
-Each schemaXchangelog.xml file points to a changelog.xml file in each object directory:
-```xml
-  <include file="tables/changelog.xml" relativeToChangelogFile="true"/>
-  <include file="index/changelog.xml" relativeToChangelogFile="true"/>
-  <include file="views/changelog.xml" relativeToChangelogFile="true"/>
-  <include file="functions/changelog.xml" relativeToChangelogFile="true"/>
-  <include file="procedures/changelog.xml" relativeToChangelogFile="true"/>
-  <include file="packages/changelog.xml" relativeToChangelogFile="true"/>
-  <include file="packagebody/changelog.xml" relativeToChangelogFile="true"/>
-  <include file="triggers/changelog.xml" relativeToChangelogFile="true"/>
-  <include file="data/changelog.xml" relativeToChangelogFile="true"/>
-  <include file="materializedviews/changelog.xml" relativeToChangelogFile="true"/>
+Each schemaXchangelog.yaml file points to a changelog.yaml file in each object directory:
+```yaml
+- include:
+    file: tables/changelog.yaml
+    relativeToChangelogFile: true
+- include:
+    file: index/changelog.yaml
+    relativeToChangelogFile: true
+- include:
+    file: views/changelog.yaml
+    relativeToChangelogFile: true
+- include:
+    file: functions/changelog.yaml
+    relativeToChangelogFile: true
+- include:
+    file: procedures/changelog.yaml
+    relativeToChangelogFile: true
+- include:
+    file: packages/changelog.yaml
+    relativeToChangelogFile: true
+- include:
+    file: packagebody/changelog.yaml
+    relativeToChangelogFile: true
+- include:
+    file: triggers/changelog.yaml
+    relativeToChangelogFile: true
+- include:
+    file: data/changelog.yaml
+    relativeToChangelogFile: true
+- include:
+    file: materializedviews/changelog.yaml
+    relativeToChangelogFile: true
 ```
 
