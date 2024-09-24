@@ -1,38 +1,45 @@
 databaseChangeLog:
 
-# - changeSet:
-#     id: function1
-#     author: nvoxland
-#     changes:
-#     - sqlFile:
-#         path: function1.sql
-#         relativeToChangelogFile: true
-#     - rollback:
-#         - sqlFile:
-#             path: function1-rollback.sql
-#             relativeToChangelogFile: true
+- changeSet:
+    id: last_updated_v1
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: last_updated_v1.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: last_updated_v0.sql
+            splitStatements: false
+            relativeToChangelogFile: true
 
-# - changeSet:
-#     id: function2
-#     author: nvoxland
-#     changes:
-#     - sqlFile:
-#         path: function2.sql
-#         relativeToChangelogFile: true
-#     - rollback:
-#         - sqlFile:
-#             path: function2-rollback.sql
-#             relativeToChangelogFile: true
+- changeSet:
+    id: _group_contact
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: _group_contact_v1.sql
+        relativeToChangelogFile: true
+        splitStatements: false
+    - rollback:
+        - sqlFile:
+            path: _group_contact_v0.sql
+            relativeToChangelogFile: true
+            splitStatements: false
 
-# - changeSet:
-#     id: function3
-#     author: nvoxland
-#     changes:
-#     - sqlFile:
-#         path: function3.sql
-#         relativeToChangelogFile: true
-#     - rollback:
-#         - sqlFile:
-#             path: function3-rollback.sql
-#             relativeToChangelogFile: true
+- changeSet:
+    id: group_concat
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: group_concat_v1.sql
+        relativeToChangelogFile: true
+        splitStatements: false
+    - rollback:
+        - sqlFile:
+            path: group_concat_v0.sql
+            relativeToChangelogFile: true
+            splitStatements: false
+
+
 

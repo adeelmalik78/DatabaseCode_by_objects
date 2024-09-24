@@ -1,11 +1,16 @@
 databaseChangeLog:
 
+# schema1 = dvdrental
 - include:
     file: schema1/schema1changelog.yaml
     relativeToChangelogFile: true
+
+# schema2 = dvdrental
 - include:
     file: schema2/schema2changelog.yaml
     relativeToChangelogFile: true
+
+# schema3 = unused
 - include:
     file: schema3/schema3changelog.yaml
     relativeToChangelogFile: true

@@ -1,20 +1,20 @@
 databaseChangeLog:
 
-# - changeSet:
-#     id: trigger1
-#     author: nvoxland
-#     changes:
-#     - sqlFile:
-#         path: trigger1.sql
-#         relativeToChangelogFile: true
-#     - rollback:
-#         - sqlFile:
-#             path: trigger1-rollback.sql
-#             relativeToChangelogFile: true
+- changeSet:
+    id: film_fulltext_trigger
+    author: workshop-user
+    changes:
+    - sqlFile:
+        path: film_fulltext_trigger.sql
+        relativeToChangelogFile: true
+    - rollback:
+        - sqlFile:
+            path: film_fulltext_trigger-rollback.sql
+            relativeToChangelogFile: true
 
 # - changeSet:
 #     id: trigger2
-#     author: nvoxland
+#     author: workshop-user
 #     changes:
 #     - sqlFile:
 #         path: trigger2.sql
@@ -26,7 +26,7 @@ databaseChangeLog:
 
 # - changeSet:
 #     id: trigger3
-#     author: nvoxland
+#     author: workshop-user
 #     changes:
 #     - sqlFile:
 #         path: trigger3.sql
