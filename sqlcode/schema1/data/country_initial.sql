@@ -22,9 +22,9 @@ INSERT INTO "country" ("country_id", "country", "last_update") VALUES (21, 'Chad
 INSERT INTO "country" ("country_id", "country", "last_update") VALUES (22, 'Chile', '2006-02-15 09:44:00');
 INSERT INTO "country" ("country_id", "country", "last_update") VALUES (23, 'China', '2006-02-15 09:44:00');
 INSERT INTO "country" ("country_id", "country", "last_update") VALUES (24, 'Colombia', '2006-02-15 09:44:00');
-INSERT INTO "country" ("country_id", "country", "last_update") VALUES (25, 'Congo, The Democratic Redvdrental of the', '2006-02-15 09:44:00');
-INSERT INTO "country" ("country_id", "country", "last_update") VALUES (26, 'Czech Redvdrental', '2006-02-15 09:44:00');
-INSERT INTO "country" ("country_id", "country", "last_update") VALUES (27, 'Dominican Redvdrental', '2006-02-15 09:44:00');
+INSERT INTO "country" ("country_id", "country", "last_update") VALUES (25, 'Congo, The Democratic Republic of the', '2006-02-15 09:44:00');
+INSERT INTO "country" ("country_id", "country", "last_update") VALUES (26, 'Czech Republic', '2006-02-15 09:44:00');
+INSERT INTO "country" ("country_id", "country", "last_update") VALUES (27, 'Dominican Republic', '2006-02-15 09:44:00');
 INSERT INTO "country" ("country_id", "country", "last_update") VALUES (28, 'Ecuador', '2006-02-15 09:44:00');
 INSERT INTO "country" ("country_id", "country", "last_update") VALUES (29, 'Egypt', '2006-02-15 09:44:00');
 INSERT INTO "country" ("country_id", "country", "last_update") VALUES (30, 'Estonia', '2006-02-15 09:44:00');
