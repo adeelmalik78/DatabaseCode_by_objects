@@ -1,0 +1,1 @@
+CREATE SCHEMA dvdrental AUTHORIZATION postgres;

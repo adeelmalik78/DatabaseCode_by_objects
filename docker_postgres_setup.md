@@ -16,12 +16,7 @@ docker run \
     -d postgres
 ```
 
-3. Copy the dvdrental.tar to the container using "docker cp" command:
-```sh
-docker cp ~/Downloads/dvdrental.tar postgres:/
-```
-
-4. Get inside the container using "docker exec" command:
+3. Get inside the container using "docker exec" command:
 ```sh
 docker exec \
     -it \
@@ -29,16 +24,11 @@ docker exec \
     /bin/bash
 ```
 
-5. Inside the container, run psql to create "dvdrental" database
+4. Inside the container, run the following commands one line at a time to create "dvdrental" schema
 ```sh
 psql -U postgres
 postgres=# CREATE SCHEMA dvdrental AUTHORIZATION postgres;
 postgres=# \q
-```
-
-6. Inside the container, run pg_restore using dvdrental.tar
-```sh
-pg_restore -U postgres -d postgres dvdrental.tar
 ```
 
 ---
